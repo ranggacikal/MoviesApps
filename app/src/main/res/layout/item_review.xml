@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_review"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/text_item_nama_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Nama User"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <com.borjabravo.readmoretextview.ReadMoreTextView
+                android:id="@+id/text_item_isi_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama User"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                app:trimExpandedText="Tampilkan Lebih Banyak"
+                app:trimCollapsedText="Tampilkan lebih dikit"
+                app:trimMode="trimModeLength"
+                app:trimLength="@integer/material_motion_duration_long_1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
